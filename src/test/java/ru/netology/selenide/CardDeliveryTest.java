@@ -221,4 +221,5 @@ public class CardDeliveryTest {
         $("[data-test-id='notification'] .notification__content").shouldHave(text("Встреча успешно забронирована на " + date),
                 Duration.ofSeconds(15)).shouldBe(visible);
     }
+
 }
