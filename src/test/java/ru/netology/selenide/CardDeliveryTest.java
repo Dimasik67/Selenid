@@ -26,10 +26,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldOrderCardDelivery() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='notification'] .notification__title").shouldHave(text("Успешно!"),
@@ -41,10 +41,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldCityWithDash() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Санкт-Петербург");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Санкт-Петербург");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='notification'] .notification__title").shouldHave(text("Успешно!"),
@@ -56,10 +56,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEnglishCity() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Moscow");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Moscow");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='city'] .input__sub")
@@ -70,10 +70,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEmptyCity() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='city'] .input__sub")
@@ -84,10 +84,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldNameWithDash() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Анна-Мария Петрова");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Анна-Мария Петрова");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='notification'] .notification__title").shouldHave(text("Успешно!"),
@@ -99,10 +99,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEnglishName() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Ivan Petrov");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Ivan Petrov");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='name'] .input__sub")
@@ -113,10 +113,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEmptyName() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='name'] .input__sub")
@@ -127,10 +127,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldPhoneWithoutPlus() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='phone'] .input__sub")
@@ -141,10 +141,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldPhoneWithoutOneNumber() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+7999888775");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+7999888775");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='phone'] .input__sub")
@@ -155,10 +155,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldPhonePlusNotInFirstPlace() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("7999+8887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("7999+8887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='phone'] .input__sub")
@@ -169,10 +169,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEmptyPhone() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='phone'] .input__sub")
@@ -183,10 +183,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldEmptyCheckbox() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $(".button").click();
         $("[data-test-id='agreement']").isSelected();
     }
@@ -194,10 +194,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldChoiceCityByTwoLetters() {
         String date = dateDelivery(3);
-        $("[data-test-id='city'] .input").setValue("Мо").click();
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Мо").click();
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='notification'] .notification__title").shouldHave(text("Успешно!"),
@@ -209,10 +209,10 @@ public class CardDeliveryTest {
     @Test
     public void shouldChoiceDateWeekAhead() {
         String date = dateDelivery(7);
-        $("[data-test-id='city'] .input").setValue("Москва");
-        $("[data-test-id='date'] .input").doubleClick().sendKeys(date);
-        $("[data-test-id='name'] .input").setValue("Иван Петров");
-        $("[data-test-id='phone'] .input").setValue("+79998887755");
+        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='date'] input").doubleClick().sendKeys(date);
+        $("[data-test-id='name'] input").setValue("Иван Петров");
+        $("[data-test-id='phone'] input").setValue("+79998887755");
         $("[data-test-id='agreement']").click();
         $(".button").click();
         $("[data-test-id='notification'] .notification__title").shouldHave(text("Успешно!"),
